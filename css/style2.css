@@ -1,0 +1,102 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	overflow: hidden;
+	background: #000;
+	height: 100vh;
+}
+span
+{
+	position: absolute;
+	background: url(heart.png);
+	pointer-events: none;
+	transform: translate(-50%,-50%);
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	animation: animate 2s linear infinite;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-50%);
+		opacity: 1;
+		filter: hue-rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-1000%);
+		opacity: 0;
+		filter: hue-rotate(720deg);
+	}
+}
+
+
+#title
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+#menu {
+    display: flex;                              
+    background-color:#9D50E8;   
+}
+
+#suivant
+{
+	float: right;
+	padding: 20px;
+}
+
+#playlist
+{
+	    margin-left: 625px;
+	    margin-top: 150px;
+}
+
+
+.zoom {
+width: 320px;
+height: 240px;
+}
+.image {
+width: 100%;
+height: 100%;
+}
+.image img {
+/* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+-webkit-transition: all 1s ease; /* Safari et Chrome */
+-moz-transition: all 1s ease; /* Firefox */
+-ms-transition: all 1s ease; /* Internet Explorer 9 */
+-o-transition: all 1s ease; /* Opera */
+transition: all 1s ease;
+}
+.image:hover img {
+/* L'image est grossie de 25% */
+-webkit-transform:scale(1.25); /* Safari et Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* Internet Explorer 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.25);
+}
+
+section
+{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: url(background2.jpg);
+	background-position-x: center;
+	background-size: cover;
+	animation: animateBg 10s linear infinite;
+
+}

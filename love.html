@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LoveList</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="icon" type="image/png" href="css/heart.png" />
+    <div id="menu">
+        <div id="title">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="css/heart.png" width="100" height="75" alt="logo" />
+                </a>
+            </nav>
+        </div>
+
+           <div id="suivant">
+        	<nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <a href="index.html"><img src="css/logo2.png" width="30" height="30" alt="logo" /></a>
+                </a>
+        	</nav>
+    	</div>
+    </div>
+</head>
+
+<body>
+    <section>
+        <script type="text/javascript">
+        document.addEventListener("mousemove", function(e) {
+            var body = document.querySelector('body');
+            var heart = document.createElement("span");
+            var x = e.offsetX;
+            var y = e.offsetY;
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            var size = Math.random() * 100;
+            heart.style.width = 20 + size + "px";
+            heart.style.height = 20 + size + "px";
+            body.appendChild(heart);
+
+            setTimeout(function() {
+                heart.remove();
+            }, 2000);
+        })
+        </script>
+        <div class="zoom">
+            <div class="image">
+                <div id='playlist'>
+                    <div style="position:relative; height:400px">
+                        <div style="position:absolute;z-index:1">
+                            <a href="https://open.spotify.com/playlist/2ggkhQu6p0Z5xhH3GQULAy?si=f34e87e9bf544caf"><img src="css/playlist2.jpg" width="300" height="300"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
